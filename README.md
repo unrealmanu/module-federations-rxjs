@@ -1,6 +1,6 @@
 # Module federation example with RXJS
 
-in this project, have tried witu success, to wrap "module federatio dynamic remote loading" with Rxjs Observable, to improve the flow control of remote importation.
+in this project, have tried witu success, to wrap "module federation dynamic remote loading" with Rxjs Observable, to improve the flow control of remote importing.
 
 ---
 
