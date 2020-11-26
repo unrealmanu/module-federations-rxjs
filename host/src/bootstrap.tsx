@@ -56,8 +56,16 @@ export const App: React.FC = () => {
       .pipe(last())
       .subscribe(
         (module: any) => {
-          const customProps = { test: "injected props" };
+          const customProps = { test: undefined };
           setComponents(module.default(customProps));
+          /*
+          // override props.children of remote components
+          React.Children.map(module.default(customProps), (child, index) => {
+            setComponents(
+              React.cloneElement(child, { children: "override children" })
+            );
+          });
+          */
         },
         (err: Error) => {
           console.error(err);
