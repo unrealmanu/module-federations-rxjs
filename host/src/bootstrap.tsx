@@ -56,7 +56,7 @@ export const App: React.FC = () => {
       .pipe(last())
       .subscribe(
         (module: any) => {
-          const customProps = { test: undefined };
+          const customProps = { test: 'injection test'};
           setComponents(module.default(customProps));
           /*
           // override props.children of remote components
