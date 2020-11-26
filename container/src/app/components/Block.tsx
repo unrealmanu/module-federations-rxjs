@@ -1,6 +1,10 @@
 import React from "react";
 
-export const Block: React.FC = () => {
-  return <>my block</>;
+interface BlockComponentsInterface {
+  test?: string;
+}
+
+export const Block: React.FC<BlockComponentsInterface> = ({ test }) => {
+  return <>my block... {test}</>;
 };
 export default Block;

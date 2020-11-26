@@ -56,7 +56,8 @@ export const App: React.FC = () => {
       .pipe(last())
       .subscribe(
         (module: any) => {
-          setComponents(module.default);
+          const customProps = { test: "injected props" };
+          setComponents(module.default(customProps));
         },
         (err: Error) => {
           console.error(err);
